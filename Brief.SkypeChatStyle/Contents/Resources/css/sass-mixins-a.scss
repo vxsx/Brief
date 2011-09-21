@@ -1,4 +1,4 @@
-@mixin opacity($opacity = 1)
+@mixin opacity($opacity : 1)
 {
 	opacity: $opacity;
 	-moz-opacity: $opacity;
@@ -51,7 +51,7 @@
 
 
 
-@mixin box-shadow($value, $value2 = "", $value3 = "", $value4 = "", $value5 = "", $value6 = "")
+@mixin box-shadow($value, $value2:'' , $value3:'', $value4:'', $value5:'', $value6:'')
 {
 	@if $value2 != "" {		$value: $value + ", " + $value2; 	}
 	@if $value3 != "" {		$value: $value + ", " + $value3; 	}
@@ -59,10 +59,10 @@
 	@if $value5 != "" {		$value: $value + ", " + $value5; 	}
 	@if $value6 != "" {		$value: $value + ", " + $value6; 	}
 
-	-webkit-box-shadow: $value;
-	-moz-box-shadow: $value;
-	-o-box-shadow: $value;
-	box-shadow: $value;
+	-webkit-box-shadow: #{$value};
+	-moz-box-shadow: #{$value};
+	-o-box-shadow: #{$value};
+	box-shadow: #{$value};
 }
 
 
