@@ -463,14 +463,13 @@ body {
 		@include cf;
 	}
 	
-	.head,
-	.body {
-		padding: 0 0 0 30px;
-	}
-	
 	.head {
+		padding: 0 0 0 30px;
 		margin: 0 0 $b/4;
 	}
+	.body {
+        margin: 0 0 0 30px;
+    }
 	
 		.avatar {
 			position: absolute;
@@ -612,6 +611,14 @@ body {
 				right: 10px; // !!!
 				margin: 0;
 			}
+            .edit,
+            .delete {
+                top: 12px;
+            }
+        .body {
+            padding: 7px 0 3px;
+            border-top: 1px dashed $line__;
+        }
 	}
 	
 	.read + .followup:not(.read) {
@@ -1244,7 +1251,7 @@ body {
 		}
 		
 			.followup .time {
-				top: 0;
+				top: 7px;
 			}
 			
 			.message:not(.followup) {
